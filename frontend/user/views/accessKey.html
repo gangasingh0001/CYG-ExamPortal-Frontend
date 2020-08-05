@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Enter Test Key</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/accessKey.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- cybergroup logo on top -->
+    <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+        <img src="../public/assets/cybergrouplogo.png" class="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.cygrp.com/">About</a>
+                </li>
+            </ul> -->
+        
+        <p style="color: white;margin-top: 15px; margin-right: 15px" id="username"></p>
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
+    </div>
+    </nav>
+
+
+    <div class="container flex">
+
+        <form>
+            <div class="inner-box">
+                <p class="error-msg"></p>
+                <span class="inner-box-text">Please Enter the Test Key Provided by your Administrator : </span><input class="inputBox" type="text" placeholder="Enter Test Access Key">
+                <br><br>
+                <button type="button" class="btn btn-success  btn-lg btn-block" id="checkAccessKey">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="../public/js/accessKey.js"></script>
+</body>
+
+</html>

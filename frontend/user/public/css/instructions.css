@@ -1,0 +1,109 @@
+li {
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+::placeholder{
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto 15% auto;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 80%;
+    font-size: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.inputBox {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid black;
+}
+
+.flex {
+    margin-top: 80px;
+    display: flex;
+    /* margin: auto; */
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+.inner-box {
+    padding: 20px;
+}
+
+.startTest {
+    float: right;
+}
+
+.instructions {
+    color: #555555;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.instruction-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+ul {
+    padding-left: 4px;
+}
+
+.instruct {
+    padding-left: 4px;
+    margin-top: 40px;
+}
+
+.btn {
+    font-weight: 100;
+}
+
+ul {
+    padding-left: 4px;
+}
+
+.error-msg {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#leftTime {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-collapse{
+    position: absolute;
+    top: 5px;
+    right: 18px;
+}

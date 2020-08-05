@@ -1,0 +1,100 @@
+li {
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: black;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    height: 50px;
+}
+
+.inputBox {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 15px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace
+}
+
+.flex {
+    margin-top: 200px;
+    display: flex;
+    width: 50%;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+.inner-box {
+    padding: 20px 40px;
+}
+
+.startTest {
+    margin-left: 50%;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+}
+
+.inner-box-text {
+    font-weight: 600;
+}
+
+.btn {
+    font-weight: 100;
+}
+
+@media(max-width:700px) {
+    .flex {
+        width: 80%;
+        margin-top: 150px;
+    }
+}
+
+@media(max-width:400px) {
+    .flex {
+        width: 90%;
+        margin-top: 150px;
+    }
+}
+
+@media(max-width:200px) {
+    .flex {
+        width: 100%;
+        margin-top: 150px;
+    }
+}
+
+.navbar-collapse{
+    position: absolute;
+    top: 5px;
+    right: 18px;
+}

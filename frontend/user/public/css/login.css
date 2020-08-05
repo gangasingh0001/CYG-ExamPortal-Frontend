@@ -1,0 +1,153 @@
+.field-icon {
+    float: right;
+     margin-right:20px;
+    margin-top: -28px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+  }
+li {
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: black;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto 15% auto;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    width: 80%;
+    font-size: 16px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.flex {
+    margin-top: 50px;
+    border-radius: 6px;
+    display: block;
+    display: flex;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 40%;
+}
+.flex-1 {
+    flex: 2;
+    margin-top: 30px;
+    width: 30%;
+}
+
+.btn,
+#signUpSubmit {
+    font-weight: 100;
+}
+.display-image {
+    width: 110.5%;
+    height: 100%;
+}
+
+body {
+    background-color: #ebebeb;
+}
+form :nth-child(1) {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.modal-content p {
+    font-weight: 100;
+}
+
+label {
+    font-weight: 400;
+}
+.mod {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}
+.cg{
+    animation: rotate 1.2s infinite;
+}
+::placeholder{
+    font-size: 12px;
+    vertical-align: middle;
+}
+@keyframes rotate{
+
+ 0%   {transform: rotateY(0deg);}
+ 50%{transform: rotateY(180deg);}
+ 100%{transform: rotateY(360deg);}
+}
+#alert-box{
+    display: none;
+}
+.container{
+    margin-top: 30px;
+}
+@media(max-width:768px){
+    .flex-1{
+        width: 40%;
+        margin-top: 25px;
+    }
+    .flex{
+        width: 40%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+
+}
+@media(max-width:500px){
+    .flex-1{
+        width: 40%;
+        margin-top: 20px;
+    }
+    .flex{
+        width: 40%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
+@media(max-width:420px){
+    .flex-1{
+        width: 40%;
+        /* margin-top: 15px; */
+    }
+    .flex{
+        width: 100%;
+        height: 85%;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
+

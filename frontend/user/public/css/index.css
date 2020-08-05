@@ -1,0 +1,93 @@
+li {
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: black;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+::placeholder{
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto 15% auto;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 80%;
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 200;
+    margin-left: 25%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.container {
+    float: left;
+    width: 500px;
+    height: 500px;
+    margin-top: 100px;
+    background-color: black;
+}
+
+.data {
+    color: white;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+#Login {
+    margin-left: 10px;
+}
+
+.spacing {
+    margin-top: 50px;
+}
+
+
+/* .color-change {
+    color: rgba(255, 64, 64, 0.8);
+    font-weight: 500;
+} */
+
+.cd-intro {
+    color: rgba(255, 255, 255, 1)
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 400px;
+    }
+    .btn{
+        margin-left: 25%;
+        font-size: 20px;
+    }
+
+
+}

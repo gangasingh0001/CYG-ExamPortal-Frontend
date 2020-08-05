@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Question</title>
+    <link rel="stylesheet" href="../public/css/question.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+        <img src="../public/assets/cybergrouplogo.png" class="logo">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Educational Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top:100px;">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="card question-border">
+                    <div class="card-header">
+                        <p>MCQ Test</p>
+                    </div>
+                    <div id="options"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="time">
+                        <p>Time left<span id="showTime"></span></p>
+                    </div>
+                    <div class="test">
+                        <p>Test Name <span class="showTest"></span></p>
+                    </div>
+                </div>
+                <div class="pagination-card"></div>
+                <div class="end">
+                    <button type="button" class="btn btn-outline-info" id="previousQuestion">Previous</button>
+                    <button type="button" class="btn btn-outline-success" id="nextQuestion">Next</button>
+                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">End Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="fullScreenModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title change-error-message">Do not exit the Full Screen otherwise the test will be submitted automatically </h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success full-button" id="goFullWindow">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Exit Test</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to submit the test ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="modalEndTest">Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="question-template" type="text/html">
+        <div class="container">
+            {{ #questions }}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="optionBox" id="{{ _id }}">
+                        <p id="{{ examCode }}">Ques - {{ questionText }}</p>
+                        {{ #status }}
+                        <div class="img-card">
+                            <img src="{{ url }}" height="100px" width="100px">
+                        </div>
+                        {{ /status }} {{ #types }}
+                        <label class="form-check-label">
+                                <input type="radio" class="form-check-radio" name="{{ _id }}" value="option1">
+                                <span class="text-font">{{ option1 }}</span>
+                            </label>
+                        <label class="form-check-label">
+                                <input type="radio" class="form-check-radio" name="{{ _id }}" value="option2">
+                                <span class="text-font">{{ option2 }}</span>
+                            </label>
+                        <label class="form-check-label">
+                                <input type="radio" class="form-check-radio" name="{{ _id }}" value="option3">
+                                <span class="text-font">{{ option3 }}</span>
+                            </label>
+                        <label class="form-check-label">
+                                <input type="radio" class="form-check-radio" name="{{ _id }}" value="option4">
+                                <span class="text-font">{{ option4 }}</span>
+                            </label> {{ /types }} {{ ^types }}
+                        <div class="checkBox">
+                            <label class="form-check-label checkBox">
+                                <input type="checkbox" class="form-check-input" name="{{ _id }}" value="option1">
+                                <span class="text-font">{{ option1 }}</span>
+                            </label>
+                            <label class="form-check-label checkBox">
+                                <input type="checkbox" class="form-check-input" name="{{ _id }}" value="option2">
+                                <span class="text-font">{{ option2 }}</span>
+                            </label>
+                            <label class="form-check-label checkBox">
+                                <input type="checkbox" class="form-check-input" name="{{ _id }}" value="option3">
+                                <span class="text-font">{{ option3 }}</span>
+                            </label>
+                            <label class="form-check-label checkBox">
+                                <input type="checkbox" class="form-check-input" name="{{ _id }}" value="option4">
+                                <span class="text-font">{{ option4 }}</span>
+                            </label>
+                        </div>
+                        {{ /types }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-danger  btn-lg" id="resetRadio">Reset</button>
+                        <button type="button" class="btn btn-outline-success btn-lg" id="submitAnswer">Submit</button>
+                    </div>
+                </div>
+            </div>
+            {{ /questions }}
+        </div>
+    </script>
+
+    <script type="text/html" id="pagination-template">
+        {{ #pages }}
+        <div class="circle" id="{{ id }}">
+            <p>{{ pages }}</p>
+        </div>
+        {{ /pages }}
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js" integrity="sha256-I5ZXO8KcMnqNkrXU7baGig70nATYjNDnxxA2d40PcR8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.0/screenfull.js"></script>
+    <script src="../public/js/question.js"></script>
+</body>
+
+</html>

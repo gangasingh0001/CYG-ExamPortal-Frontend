@@ -1,0 +1,87 @@
+<!Doctype html>
+
+<head>
+    <title>Performance of Student</title>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js"></script>
+        <link rel="stylesheet" href="../public/css/viewPerformance.css">
+        <script type="text/javascript" src="../public/js/examiner.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+
+    </head>
+
+    <body onload="showStudents(),showName()">
+        <div id="main">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+                <img src="../../user/public/assets/cybergrouplogo.png" class="logo">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+        
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="location.href='examiner.html'">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="location.href='contactUs.html'">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="location.href='exam.html'">Exam Collections</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <span id="span">Welcome &nbsp; </span>
+        
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
+                    </form>
+                </div>
+            </nav>
+        <div class="main">
+            <h2 class="container display-4 performance-text">Performance of Students : </h2>
+            <table class="container table table-light table-striped performance-table" id="tbdy">
+                <thead>
+
+                    <th>Exam Code</th>
+                    <th>Exam Name</th>
+
+                </thead>
+
+            </table>
+            <!-- <center> -->
+            <!-- </center> -->
+        </div>
+        <div class="loading" id="loading">
+            <span>LOADING . . . </span>
+        </div>
+        <div>
+            <table class="container table performance-table-1 student-detail-table" id="tcan">
+
+            </table>
+        </div>
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="wrapper" id="wrapper">
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <div class="title text-center mb-5">
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="../public/js/viewPerformance.js"></script>
+    </body>
+</head>
+
+</html>

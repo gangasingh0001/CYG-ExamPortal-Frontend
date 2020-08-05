@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Cyber Group - Otp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- cybergroup logo on top -->
+    <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/loader.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+            <img src="../public/assets/cybergrouplogo.png" class="logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.cygrp.com/">About</a>
+                    </li>
+                </ul>
+                
+
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-top: 50px;">
+            <div class="row" style="display: none;">
+                <div class="col-xs-6 col-sm-4"></div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="output" placeholder="">
+                        <!-- <span class="input-group-btn">
+                          <button class="btn btn-success" id="verify" type="button">Verify</button>
+                        </span> -->
+                    </div>
+                </div>
+                
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4"></div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter OTP from email">
+                        <span class="input-group-btn">
+                          <button class="btn btn-success" id="verify" type="button">Verify</button>
+                        </span>
+                      </div>
+                </div>
+                
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-4"></div>
+            </div>
+        </div>
+
+        <!-- for displaying loader -->
+        <div class="mod">
+            <div class="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+        <script src="../public/js/otp.js"></script>
+</body>
+
+</html>

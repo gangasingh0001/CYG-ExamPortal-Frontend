@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $(document).on('click','#node-server',function(){
+        localStorage.setItem("server-port",'3000');
+        $(location).attr('href','./user/views/examPortal.html')
+    })
+    $(document).on('click','#dot-net-server',function(){
+        localStorage.setItem("server-port",'45728');
+        $(location).attr('href','./user/views/examPortal.html');
+    })
+})

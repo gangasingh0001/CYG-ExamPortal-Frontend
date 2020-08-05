@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Instructions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/instructions.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- cybergroup logo on top -->
+    <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+        <img src="../public/assets/cybergrouplogo.png" class="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.cygrp.com/">About</a>
+                </li>
+            </ul> -->
+        
+        <p style="color: white;margin-top: 15px; margin-right: 15px" id="username"></p>
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
+    </div>
+    </nav>
+    <br><br>
+    <div class="container flex">
+        <form>
+            <div class="inner-box">
+                <span class="instruction-text">INSTRUCTIONS :</span>
+
+                <p class="instructions">This test consists of two sections: <br>
+                    <ul class="instruct">
+
+                        <li> A multiple-choice question section and a constructed-response assignment section. Each question in the first section is a multiple-choice question with four answer choices. Read each question and answer choice carefully and choose
+                            the ONE best answer.</li>
+                        <li>Try to answer all questions. In general, if you have some knowledge about a question, it is better to try to answer it. You will not be penalized for guessing.</li>
+                        <li>The second section contains one constructed-response assignment. Directions for the constructed-response assignment section appear immediately before the assignment.</li>
+                        <li>
+                            You may work on the multiple-choice questions and the constructed-response assignment in any order that you choose. Be sure to allocate your time carefully so you are able to complete the entire test within the testing session. You may go back and review
+                            your answers at any time during the testing session.</li>
+                        <li> You may NOT use a calculator or reference materials during the testing session. Select the Start button to continue.</li>
+                </p>
+                </ul>
+                <p class="error-msg"></p>
+                <p id="leftTime"></p>
+            </div>
+            <button type="button" class="btn btn-success startTest" disabled>Start Test</button>
+        </form>
+    </div>
+    <script src="../public/js/instructions.js"></script>
+</body>
+
+</html>

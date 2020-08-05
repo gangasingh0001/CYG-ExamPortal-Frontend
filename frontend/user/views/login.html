@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Cyber Group - Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- cybergroup logo on top -->
+    <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+            <img src="../public/assets/cybergrouplogo.png" class="logo" onclick="location.href='examPortal.html'">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.cygrp.com/">About</a>
+                    </li>
+                </ul>
+                <button id="Login" class="btn btn-success my-2 my-sm-0" style="color: white; font-weight: 100; padding: 6px 12px;" onclick="location.reload();location.href='./signUp.html'">Sign Up</button>
+
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="container flex" style="margin-top: 50px;">
+            <div class="flex-1">
+                <form class="modal-content">
+                    <h1> <span>Login</span></h1>
+                    <p>Please fill in the credentials to continue.</p>
+                    
+                    <div class="form-group">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="(eg. abc@gmail.com)" required autofocus>
+                        <div class="valid-feedback" id="view_Valid3" style="display: none;">
+                                Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="view_Invalid3" style="display: none;">
+                            Please Enter a valid email Id
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Enter Password" required>
+                        <span toggle="#inputPassword" class="fa fa-fw fa-eye field-icon toggle-password" onmousedown="showpasswordtext()" onmouseup="showpassword()"></span>  
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                        <div class="alert alert-danger alert-dismissible fade show" id="alert-box">
+                            <strong>Alert!</strong> Invalid Credentials.
+                    </div>
+                    <button class="btn btn-success my-2 my-sm-0" style="color: white;" id="loginButton" type="button">Login</button>
+                </form>
+               
+            </div>
+        </div>
+
+    </div>
+
+    <!-- for displaying loader -->
+    <div class="mod">
+            <div class="spinner">
+                <div class="loader">
+                    <img src="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" class="cg">
+                </div>
+            </div>
+        </div>    
+    <script src="../public/js/login.js"></script>
+    <script src="../../user/public/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!Doctype html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Exam Portal!</title>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../public/css/examiner.css">
+        <script type="text/javascript" src="../public/js/examiner.js"></script>
+        <script src="https://kit.fontawesome.com/ad350219ae.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="https://www.cygrp.com/wp-content/uploads/2019/06/cybergroup-site-icon.png" type="image/x-icon">
+
+    </head>
+
+    <body onload="showName()">
+        <div id="main">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+                <img src="../../user/public/assets/cybergrouplogo.png" class="logo">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+        
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="hideEditDetails()">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="location.href='contactUs.html'">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="location.href='exam.html'">Exam Collections</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="dropdown">
+                        <span id="span">Welcome &nbsp; </span>
+                            <div class="dropdown-content">
+                                <button class="btn btn-danger" onclick="showEdit()"><a href="#edit" style="text-decoration: none; color: rgba(255, 255, 255, 1);">Edit</a></button>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
+                    </form>
+                </div>
+            </nav>
+        <h2 class="container display-4">Choose one of the options Below : </h2>
+        <!-- choose options div -->
+        <div class="container options-div">
+            <!-- <div class="container container-1">
+                <button type="button" class="btn btn-success" onclick="location.reload();location.href='examdetails.html'">Create Test</button>
+                <button type="button" class="btn btn-primary" onclick="location.reload();location.href='exam.html'">View Tests</button>
+                <button type="button" class="btn btn-danger" onclick="location.reload();location.href='viewPerformance.html'">View Performance of Students</button>
+            </div> -->
+            <div class="option-div-flex">
+                <div class="flex-1">
+                    <i class="far fa-plus-square"></i>
+                    <span>Create an Exam</span>
+                </div>
+                <div class="flex-1">
+                    <button type="button" class="btn btn-outline-success" onclick="location.reload();location.href='examdetails.html'">Create</button>
+                </div>
+
+            </div>
+            <div class="option-div-flex">
+                <div class="flex-1">
+
+                    <i class="fas fa-book-open"> </i>
+                    <span>View an Exam</span>
+                </div>
+                <div class="flex-1">
+
+                    <button type="button" class="btn btn-outline-success" onclick="location.reload();location.href='exam.html'">View</button>
+                </div>
+            </div>
+            <div class="option-div-flex">
+                <div class="flex-1">
+
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>View Performance of Students</span>
+                </div>
+                <div class="flex-1">
+
+                    <button type="button" class="btn btn-outline-success" onclick="location.reload();location.href='viewPerformance.html'">View</button>
+                </div>
+            </div>
+        </div>
+        <!-- Edit details div -->
+        <div>
+            <div class="container-1 edit-details" id="showEditDiv">
+                <span class="edit-text"><a name='edit'>Edit Details : </a></span>
+                <input type="text" placeholder="Email : " id="loggedInEmail" readonly>
+                <input type="text" placeholder="Name : " id="loggedInName">
+                <div class="valid-feedback" id="view_Valid1" style="display: none;">
+                        Looks good!
+                </div>
+                <div class="invalid-feedback" id="view_Invalid1" style="display: none;">
+                        Please Enter a valid name
+                </div>
+                <input type="password" placeholder="Password : " id="loggedInPassword" required readonly>
+                <input type="text" placeholder="Phone No : " id="loggedInPhone">
+                <div class="valid-feedback" id="view_Valid4" style="display: none;">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="view_Invalid4" style="display: none;">
+                        Please Enter a valid 10 digit mobile number
+                    </div>
+                <input type="text" placeholder="College Name : " id="loggedInCollege">
+                <div class="edit-div-btn">
+                    <button class="btn btn-success" onclick="editDetails()">Update</button>
+                    <button class="btn btn-primary" onclick="hideEditDetails()">Back</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</head>
+
+</html>

@@ -1,0 +1,220 @@
+body {
+    background-color: #EBEBEB;
+}
+
+.username-text {
+    margin-right: 10px;
+}
+
+.change-error-message{
+    color: red;
+    font-weight: bold;
+}
+.modal-title {
+    font-weight: 100;
+    font-size: 20px;
+}
+::placeholder{
+    font-size: 12px;
+    vertical-align: middle;
+}
+.full-button {
+    font-weight: 100;
+}
+
+.card,
+.pagination-card {
+    border-radius: 16px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text-font {
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.card h3 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 0px !important;
+}
+
+.button-group {
+    float: right;
+    position: relative;
+}
+
+.endTest {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.end {
+    float: right;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+
+.time {
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.question {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: green;
+}
+
+.test {
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #EBEBEB;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.showTime,
+.showQuestion,
+.showTest {
+    float: right;
+}
+
+.form-check {
+    margin-top: 4px;
+    padding-left: 0!important;
+}
+
+#options {
+    padding-bottom: 14px;
+}
+
+.optionBox {
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.optionBox label {
+    display: block;
+}
+
+#showTime {
+    float: right;
+}
+
+li {
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: black;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    height: 50px;
+}
+
+.img-card{
+    text-align: center;
+}
+
+.img-card img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pagination-card {
+    height: 325px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: white;
+    /* text-align: center; */
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: #EBEBEB;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.circle:hover{
+    box-shadow: 0px 0px 7px 3px rgba(222,213,222,1);
+}
+
+.circle p {
+    margin-top: 12px;
+}
+
+@media(max-width: 768px) {
+    .card {
+        margin-top: 15px;
+    }
+}
+
+.card-header p {
+    font-weight: 100 !important;
+    font-size: 30px;
+    text-align: center;
+}
+
+.optionBox p {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.checkBox {
+    margin-left: 10px;
+}
+
+.form-check-input {
+    margin-top: 10.3px !important;
+}

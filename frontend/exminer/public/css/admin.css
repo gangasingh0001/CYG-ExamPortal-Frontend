@@ -1,0 +1,35 @@
+li {
+    margin-left: 50px;
+    font-weight: 500;
+    }
+    li:hover {
+    background-color: #c4e3f3;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+    }
+     a:hover {
+    color: blue;
+    }
+    
+    .nav-link:hover {
+    color: blue;
+    }
+    .container
+    {
+        width:50%;
+        
+    }
+    ::placeholder{
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    #marginfromtop
+    {
+       width:40%;
+       margin-top:18%; 
+    }
+    pre{
+        font-weight:bold;
+    }
+    
