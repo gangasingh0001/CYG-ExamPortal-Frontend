@@ -193,7 +193,8 @@ function excelUpload(event) {
         data: formData,
         headers: {
             token: localStorage.getItem('token'),
-            Authorization: "Bearer "+localStorage.getItem('token')
+            Authorization: "Bearer "+localStorage.getItem('token'),
+            
         },
         lowerCaseHeaders: true,
         contentType:false,

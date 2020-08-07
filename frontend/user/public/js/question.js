@@ -78,7 +78,8 @@ function loadFullWindow() {
 }
 
 function exitHandler() {
-    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+   
+    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement ) {
         let count = parseInt(localStorage.getItem('fullWindowExit'))
         if(count != 3){
             $('#fullScreenModal').modal('show')
@@ -92,6 +93,24 @@ function exitHandler() {
         }  
     }
 }
+
+function exitOnWindowChange() {
+    
+  let count = parseInt(localStorage.getItem('fullWindowExit'))
+  if(count != 3){
+      $('#fullScreenModal').modal('show')
+      count = count + 1
+      let remainingAttempt  = 3 - count
+      $('.change-error-message').text('Do not exit full window. Otherwise test will be submitted automatically. Remaining attempts '+remainingAttempt)
+      localStorage.setItem('fullWindowExit',count)
+  }
+  else{
+      $('#modalEndTest').trigger("click")
+  }  
+  
+    
+}
+
 $(window).on('load', function() {
     $('#fullScreenModal').modal('show')
 })
@@ -102,10 +121,45 @@ $(document).on('click', '#goFullWindow', function() {
 })
 
 $(document).ready(function() {
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 9) {
+            // event.stopImmediatePropagation();
+            let count = parseInt(localStorage.getItem('fullWindowExit'))
+            if(count ==  3){
+                dataToSend = {
+                    code: localStorage.getItem("examCode")
+                }
+                $.ajax("https://node-examportal.herokuapp.com/exam/endTest", {
+                    type: 'POST',
+                    dataType: 'JSON',
+                    contentType: "application/json;charset=utf-8",
+                    headers: {
+                        examCode: localStorage.getItem('examCode'),
+                        token: localStorage.getItem('token'),
+                        Authorization: "Bearer "+localStorage.getItem('token')
+                    },
+                    data: JSON.stringify(dataToSend),
+                    success: function(data) {
+                        localStorage.clear()
+                        $(location).attr('href', './endTest.html')
+                    },
+                    error: function(error) {
+                       
+                    }
+                })
+            }else{
+                
+                exitOnWindowChange()
+            }
+            
+        }
+    });
+    window.addEventListener('onblur',exitOnWindowChange);
+    window.addEventListener('visibilitychange', exitOnWindowChange);
     document.addEventListener('fullscreenchange', exitHandler);
     document.addEventListener('webkitfullscreenchange', exitHandler);
     document.addEventListener('mozfullscreenchange', exitHandler);
-    document.addEventListener('MSFullscreenChange', exitHandler);
+    document.addEventListener('MSFullscreenChange', exitHandler);               
      localStorage.setItem('fullWindowExit',0)
     const tok = localStorage.getItem('token');
     if (tok == null) {

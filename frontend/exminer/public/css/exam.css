@@ -318,9 +318,18 @@ option {
     border-radius: 2px;
     font-size: 15px;
 }
+
 #question-Index{
     position: fixed;
-    margin-left: 73%;
+    flex: 1;
+    /* align-items: flex-end; */
+    /* align-self: center; */
+    flex-direction: column;
+    /* align-content: center; */
+    /* float: right; */
+  
+    margin-left: 60%;
+    margin-right: inherit;
     
 }
 
@@ -370,10 +379,10 @@ option {
     }
  }
 .fixed{
-    display: grid;
+    /* display: grid; */
 }
 #question-Index{
-    position: fixed;
+    /* position: fixed; */
     
 }
 
